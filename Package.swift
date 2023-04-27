@@ -15,13 +15,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ZXingCpp",
-            url: "https://github.com/kientux/zxing-cpp-swiftpm/releases/download/0.0.3/ZXingCpp.xcframework.zip",
-            checksum: "db0967ea38755cbaf5733fdbe9dcea121fa2657a6fc4cecad233e8a3bd2b7488"
+            url: "https://github.com/kientux/zxing-cpp-swiftpm/releases/download/0.0.4/ZXingCpp.xcframework.zip",
+            checksum: "69efa367a5193748bc1d87464bb04c5977fff5cf41b7747897e209bc43cadce7"
         ),
         .target(
             name: "ZXingCppWrapper",
             dependencies: ["ZXingCpp"],
-            path: "zxing-cpp/wrappers/ios/Sources/Wrapper",
+            path: "Sources/Wrapper",
             publicHeadersPath: ".",
             cxxSettings: [
                 .unsafeFlags(["-stdlib=libc++"]),

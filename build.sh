@@ -6,10 +6,13 @@ NORMAL="\033[0m"
 TARGET_VERSION=$(cat target-zxing-cpp-version.txt)
 
 git clone https://github.com/zxing-cpp/zxing-cpp
-cd zxing-cpp/wrappers/ios
+cd zxing-cpp
 git checkout $TARGET_VERSION
 
+cp -r wrappers/ios/Sources ../
+
 echo "${BOLD}Build release zxing-cpp...${NORMAL}\n"
+cd wrappers/ios
 ./build-release.sh
 
 echo "\n${BOLD}Compress ZXingCpp.xcframework...${NORMAL}"
