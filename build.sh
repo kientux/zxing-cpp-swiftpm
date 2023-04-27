@@ -3,9 +3,13 @@
 BOLD="\033[1m"
 NORMAL="\033[0m"
 
-echo "${BOLD}Build release zxing-cpp...${NORMAL}\n"
+TARGET_VERSION=$(cat target-zxing-cpp-version.txt)
 
+git clone https://github.com/zxing-cpp/zxing-cpp
 cd zxing-cpp/wrappers/ios
+git checkout $TARGET_VERSION
+
+echo "${BOLD}Build release zxing-cpp...${NORMAL}\n"
 ./build-release.sh
 
 echo "\n${BOLD}Compress ZXingCpp.xcframework...${NORMAL}"
