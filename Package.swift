@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ZXingCpp",
-            url: "https://github.com/kientux/zxing-cpp-swiftpm/releases/download/0.0.2/ZXingCpp.xcframework.zip",
-            checksum: "ca0e9c910e114ffcbcddb56cd14e0722057ee154fc91567f26c81e4c19971b72"
+            url: "https://github.com/kientux/zxing-cpp-swiftpm/releases/download/0.0.3/ZXingCpp.xcframework.zip",
+            checksum: "db0967ea38755cbaf5733fdbe9dcea121fa2657a6fc4cecad233e8a3bd2b7488"
         ),
         .target(
             name: "ZXingCppWrapper",
